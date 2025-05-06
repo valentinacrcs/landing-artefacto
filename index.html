@@ -26,6 +26,15 @@
       padding: 20px 0;
       text-align: center;
     }
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card-hover:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    
   </style>
 </head>
 <body>
@@ -68,15 +77,23 @@
 <!-- DEMO INTERACTIVO -->
 <section class="py-5 bg-white text-center">
   <div class="container">
-    <h2 class="mb-4">Explora nuestro demo</h2>
-    <p class="lead mb-4">Interactúa con un mockup funcional y simula cómo +Zaldo automatiza tu registro de gastos.</p>
-    <div class="ratio ratio-16x9 mb-3">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-              title="Demo Interactivo +Zaldo" allowfullscreen></iframe>
+    <h2 class="mb-4">Demo Interactivo</h2>
+    <p class="lead mb-4">Explora las pantallas reales de +Zaldo en formato móvil.</p>
+
+    <div style="max-width: 400px; margin: 0 auto;">
+      <iframe 
+        style="border: 1px solid rgba(0, 0, 0, 0.1);" 
+        width="375" height="800" 
+        src="https://embed.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/QwrvHAuGYuReBIzwfu2PgH/-Zaldo?node-id=327-1265" 
+        allowfullscreen>
+      </iframe>
     </div>
-    <p class="text-muted">* Demo basado en conexión sandbox con API Fintoc y simulación del dashboard interactivo.</p>
+
+    <p class="text-muted mt-3">* Versión en formato móvil navegable (Flow 1, Light Mode).</p>
   </div>
 </section>
+
+
 
 <!-- SANDBOX CONEXIÓN -->
 <section class="py-5 bg-light text-center">
@@ -89,11 +106,30 @@
 </section>
 
 <!-- SIMULACIÓN DEL DASHBOARD -->
-<section class="py-5 bg-white text-center">
+<section class="py-5 bg-white text-center" id="dashboard">
   <div class="container">
     <h2 class="mb-4">Visualiza tu panel financiero</h2>
-    <p class="mb-3">Simulamos cómo se vería tu dashboard una vez categorizados automáticamente tus gastos.</p>
-    <img src="assets/mockup-dashboard.png" alt="Dashboard Simulado +Zaldo" class="img-fluid rounded shadow">
+    <p class="mb-4">¿Quieres que tus gastos se vean así?</p>
+
+    <div class="row justify-content-center g-4">
+      <div class="col-md-4">
+        <div class="card card-hover shadow-sm border-0">
+          <img src="assets/gastos 2.png" class="card-img-top rounded" alt="Distribución de gastos">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-hover shadow-sm border-0">
+          <img src="assets/gastos 4.png" class="card-img-top rounded" alt="Gasto mensual por categoría">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-hover shadow-sm border-0">
+          <img src="assets/gastos 3.png" class="card-img-top rounded" alt="Top 5 gastos del mes">
+        </div>
+      </div>
+    </div>
+
+    <a href="#feedback" class="btn btn-primary btn-lg mt-5">Déjanos tu opinión</a>
   </div>
 </section>
 
